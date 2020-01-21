@@ -48,11 +48,11 @@ public class Board {
         Color white = new Color(255, 255, 255);
         Color stackOrQueue = new Color(board.imageData.getRGB(99, 99));
         LinkedList result = new LinkedList();
-        int[] checks = new int[]{1,6,11,16,21,26,31,36,41,46,51,56,61,66,71,76,81,86,91,96};
+//        int[] checks = new int[]{1,6,11,16,21,26,31,36,41,46,51,56,61,66,71,76,81,86,91,96};
         int[] checksReverse = new int[]{96,91,86,81,76,71,66,61,56,51,46,41,36,31,26,21,16,11,6,0};
         if (stackOrQueue.equals(black)) {
             Queue cutie = new Queue();
-            for (int y : checks) {
+            for (int y = 1;y < 100;y += 5) {
                 Color color = new Color(board.imageData.getRGB(20,y));
                 if (!color.equals(white)) {
                     cutie.enqueue(color);
